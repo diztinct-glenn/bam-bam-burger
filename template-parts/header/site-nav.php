@@ -31,16 +31,16 @@
 		<div class="primary-menu-container">
 			<ul id="primary-menu-list" class="menu-wrapper">
 				<li class="menu-item">
-					<a href="">About Us</a>
+					<a href="#about">About Us</a>
 				</li>
 				<li class="menu-item">
-					<a href="">Videos</a>
+					<a href="#video">Videos</a>
 				</li>
 				<li class="menu-item">
-					<a href="">Photos</a>
+					<a href="#gallery">Photos</a>
 				</li>
 				<li class="menu-item">
-					<a href="">Contact</a>
+					<a href="#contact">Contact</a>
 				</li>
 			</ul>
 </div>

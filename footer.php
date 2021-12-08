@@ -16,54 +16,40 @@
 		</div><!-- #primary -->
 	</div><!-- #content -->
 
-	<?php get_template_part( 'template-parts/footer/footer-widgets' ); ?>
-
 	<footer id="colophon" class="site-footer" role="contentinfo">
-
-		<?php if ( has_nav_menu( 'footer' ) ) : ?>
-			<nav aria-label="<?php esc_attr_e( 'Secondary menu', 'twentytwentyone' ); ?>" class="footer-navigation">
-				<ul class="footer-navigation-wrapper">
-					<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'footer',
-							'items_wrap'     => '%3$s',
-							'container'      => false,
-							'depth'          => 1,
-							'link_before'    => '<span>',
-							'link_after'     => '</span>',
-							'fallback_cb'    => false,
-						)
-					);
-					?>
-				</ul><!-- .footer-navigation-wrapper -->
-			</nav><!-- .footer-navigation -->
-		<?php endif; ?>
 		<div class="site-info">
 			<div class="site-name">
-				<?php if ( has_custom_logo() ) : ?>
-					<div class="site-logo"><?php the_custom_logo(); ?></div>
-				<?php else : ?>
-					<?php if ( get_bloginfo( 'name' ) && get_theme_mod( 'display_title_and_tagline', true ) ) : ?>
-						<?php if ( is_front_page() && ! is_paged() ) : ?>
-							<?php bloginfo( 'name' ); ?>
-						<?php else : ?>
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-						<?php endif; ?>
-					<?php endif; ?>
-				<?php endif; ?>
+				<div class="site-logo"><?php the_custom_logo(); ?></div>
 			</div><!-- .site-name -->
-			<div class="powered-by">
-				<?php
-				printf(
-					/* translators: %s: WordPress. */
-					esc_html__( 'Proudly powered by %s.', 'twentytwentyone' ),
-					'<a href="' . esc_url( __( 'https://wordpress.org/', 'twentytwentyone' ) ) . '">WordPress</a>'
-				);
-				?>
-			</div><!-- .powered-by -->
 
+			<div class="footer-col">
+				<h3 class="footer-heading">Important Links</h3>
+				<ul>
+					<li><a href="#about">About Us</a></li>
+					<li><a href="#video">Videos</a></li>
+					<li><a href="#gallery">Photos</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</div>
+			<div class="footer-col">
+				<h3 class="footer-heading">Other</h3>
+				<ul>
+					<li><a href="">Privacy Policy</a></li>
+					<li><a href="">Terms & Condition</a></li>
+					<li><a href="">Return and Refund Policy</a></li>
+				</ul>
+			</div>
+			<div class="footer-col fc-contact">
+				<h3 class="footer-heading">Contact Us</h3>
+				<ul>
+					<li><a href="https://goo.gl/maps/KrdbtwDo1crRLeqt7" target="_blank"><img src="<?php bloginfo('template_url'); ?>/assets/images/marker.png" alt="marker"> 522 Bay Ave, Point Pleasant Beach, NJ 08742</a></li>
+					<li><a href="mailto:"><img src="<?php bloginfo('template_url'); ?>/assets/images/envelope.png" alt="envelope"> abcmail@gmail.com</a></li>
+				</ul>
+			</div>
 		</div><!-- .site-info -->
+		<div class="powered-by">
+			&copy; <script>document.write(/\d{4}/.exec(Date())[0])</script> Bam Bam Burger
+		</div><!-- .powered-by -->
 	</footer><!-- #colophon -->
 
 </div><!-- #page -->

@@ -353,6 +353,8 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
  */
 html {
 	line-height: 1.15;
+	background: #f19505;
+	scroll-behavior: smooth;
 
 	/* 1 */
 	-webkit-text-size-adjust: 100%;
@@ -362,13 +364,6 @@ html {
 
 /* Sections
    ========================================================================== */
-
-/**
- * Remove the margin in all browsers.
- */
-body {
-	margin: 0;
-}
 
 /**
  * Render the `main` element consistently in IE.
@@ -775,7 +770,6 @@ template {
 .pagination,
 .comments-pagination,
 .post-navigation,
-.site-footer,
 .site-header,
 .alignwide,
 .wide-max-width {
@@ -1091,7 +1085,7 @@ body {
 	font-weight: normal;
 	color: var(--global--color-primary);
 	text-align: left;
-	background-color: var(--global--color-background);
+	background-color: #fff;
 }
 
 button {
@@ -3961,7 +3955,7 @@ table.wp-calendar-table caption {
 }
 
 .site-footer > .site-info {
-	padding-top: var(--global--spacing-vertical);
+	padding-top: 47px;
 	color: var(--footer--color-text);
 	font-family: var(--footer--font-family);
 	font-size: var(--footer--font-size);
@@ -3974,46 +3968,14 @@ table.wp-calendar-table caption {
 	font-size: var(--branding--title--font-size);
 }
 
-.site-footer > .site-info .powered-by {
+.powered-by {
 	margin-top: calc(0.5 * var(--global--spacing-vertical));
-}
-@media only screen and (min-width: 822px) {
-
-	.site-footer > .site-info {
-		display: flex;
-		align-items: center;
-	}
-
-	.site-footer > .site-info .powered-by {
-		margin-top: initial;
-		margin-left: auto;
-	}
-}
-
-.site-footer > .site-info a {
-	color: var(--footer--color-link);
-}
-
-.site-footer > .site-info a:link,
-.site-footer > .site-info a:visited,
-.site-footer > .site-info a:active {
-	color: var(--footer--color-link);
-}
-
-.site-footer > .site-info a:hover {
-	color: var(--footer--color-link-hover);
-}
-
-.site-footer > .site-info a:focus {
-	color: var(--footer--color-link-hover);
-}
-
-.is-dark-theme .site-footer > .site-info a:focus {
-	color: var(--wp--style--color--link, var(--global--color-background));
-}
-
-.has-background-white .site-footer > .site-info a:focus {
-	color: var(--wp--style--color--link, var(--global--color-white));
+	color: #fff;
+	width: 100%;
+	text-align: center;
+	font-size: 16px;
+	line-height: 38px;
+	font-weight: 500;
 }
 
 .singular .entry-header {
@@ -4678,7 +4640,6 @@ h1.page-title {
 	padding-top: calc(var(--button--line-height) * var(--primary-nav--font-size-button) + 42px + 5px);
 	padding-bottom: var(--global--spacing-horizontal);
 	background-color: #fff;
-	transition: all 0.15s ease-in-out;
 	transform: translateY(var(--global--spacing-vertical));
 }
 @media only screen and (max-width: 767px) {
@@ -4689,6 +4650,7 @@ h1.page-title {
 		overflow-x: hidden;
 		overflow-y: auto;
 		border: 2px solid transparent;
+		transition: all 0.15s ease-in-out;
 	}
 
 	.has-logo.has-title-and-tagline .primary-navigation > .primary-menu-container {
@@ -5888,6 +5850,15 @@ main,
 section,
 footer {
 	max-width: none;
+}
+
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+	margin: 0 auto;
+	overflow-x: hidden;
+	max-width: 1600px;
 }
 
 .is-IE.is-dark-theme {

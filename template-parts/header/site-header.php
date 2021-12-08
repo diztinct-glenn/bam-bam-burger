@@ -18,6 +18,6 @@ $wrapper_classes .= has_nav_menu( 'primary' ) ? ' has-menu' : '';
 	<?php get_template_part( 'template-parts/header/site-branding' ); ?>
 	<?php get_template_part( 'template-parts/header/site-nav' ); ?>
 
-	<a class="order-now" href="">Order Now</a>
+	<a class="order-now" href="https://www.toasttab.com/bam-bam-burger-co/v3/">Order Now</a>
 
 </header><!-- #masthead -->
