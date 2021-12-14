@@ -14,7 +14,7 @@
 
 .site-header {
   position: absolute;
-  z-index: 1;
+  z-index: 999;
   left: 0;
   right: 0;
 
@@ -39,6 +39,7 @@
 
 .site-main {
   padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 .site-branding {
@@ -103,12 +104,21 @@
   }
 }
 
+#page {
+  overflow-x: hidden;
+}
+
 .site-footer {
-  background: url('./assets/images/footer-background.png') no-repeat 50% 50%, #1e0809;
+  background: url('./assets/images/footer-background-mob.png') no-repeat 50% 100%, #1e0809;
   background-size: cover;
 
+  @media (min-width: 768px) {
+    background: url('./assets/images/footer-background.png') no-repeat 50% 50%, #1e0809;
+    background-size: cover;
+  }
+
   .site-info {
-    max-width: 1100px;
+    max-width: 1120px;
     margin: 0 auto;
     position: relative;
     display: flex;
@@ -128,6 +138,8 @@
     }
     @media (min-width: 768px) {
       width: 25%;
+      text-align: left;
+      padding-left: 10px;
     }
 
     .site-logo  {
@@ -143,19 +155,26 @@
 
   .footer-col {
     width: 50%;
+    padding: 0 20px;
 
     @media (max-width: 767px) {
       order: 2;
     }
     @media (min-width: 768px) {
       width: 25% !important;
+      padding-right: 0;
     }
 
     &.fc-contact {
       width: 100%;
+      margin-bottom: 40px;
 
       @media (max-width: 767px) {
         order: 1;
+      }
+      @media (min-width: 768px) {
+        padding-right: 10px;
+        margin-bottom: 0;
       }
 
       .footer-heading {
@@ -165,13 +184,14 @@
       }
 
       ul {
-        @media (max-width: 767px) {
-          margin: 0 20px;
-        }
 
         li {
           border-top: 1px solid rgba(255, 255, 255, .3);
           border-bottom: 1px solid rgba(255, 255, 255, .3);
+
+          @media (min-width: 768px) {
+            border: 0;
+          }
 
           + li {
             border-top: 0;
@@ -196,6 +216,7 @@
       @media (min-width: 768px) {
         font-size: 24px;
         line-height: 33px;
+        margin-bottom: 20px;
       }
     }
 

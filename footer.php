@@ -46,10 +46,11 @@
 					<li><a href="mailto:"><img src="<?php bloginfo('template_url'); ?>/assets/images/envelope.png" alt="envelope"> abcmail@gmail.com</a></li>
 				</ul>
 			</div>
+
+			<div class="powered-by">
+				&copy; <script>document.write(/\d{4}/.exec(Date())[0])</script> Bam Bam Burger
+			</div><!-- .powered-by -->
 		</div><!-- .site-info -->
-		<div class="powered-by">
-			&copy; <script>document.write(/\d{4}/.exec(Date())[0])</script> Bam Bam Burger
-		</div><!-- .powered-by -->
 	</footer><!-- #colophon -->
 
 </div><!-- #page -->

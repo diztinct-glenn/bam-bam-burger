@@ -46,6 +46,11 @@ get_header(); ?>
 <div id="video">
 	<h2 class="section-heading">Video Of The Week</h2>
 
+	<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+	<div id="yt-wrapper">
+		<div class="elfsight-app-a9375b25-2a6c-48ec-b37b-c7e692732183"></div>
+	</div>
+
 	<img id="arugula" src="<?php bloginfo('template_url'); ?>/assets/images/arugula.png" alt="arugula">
 </div>
 
@@ -66,12 +71,25 @@ get_header(); ?>
 <div id="gallery">
 	<h2 class="section-heading">Our Gallery</h2>
 
+	<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+	<div id="ig-wrapper">
+		<div class="elfsight-app-16363f7c-0b75-4f82-a807-980f6bd12f7a"></div>
+	</div>
+
 	<img id="gallery-left" src="<?php bloginfo('template_url'); ?>/assets/images/gallery-left.png" alt="veggies">
 	<img id="gallery-right" src="<?php bloginfo('template_url'); ?>/assets/images/gallery-right.png" alt="veggies">
 </div>
 
 <div id="contact">
+	<div id="contact-form">
+		<h2 class="section-heading">Contact Us</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur icing elit, sed do eiusmod tempor</p>
+	</div>
 
+	<img id="bb-burger" src="<?php bloginfo('template_url'); ?>/assets/images/bam-bam-burger.png" alt="Bam Bam Burger">
+
+	<img id="contact-left" src="<?php bloginfo('template_url'); ?>/assets/images/contact-left.png" alt="veggies">
+	<img id="contact-right" src="<?php bloginfo('template_url'); ?>/assets/images/contact-right.png" alt="veggies & patty">
 </div>
 
 <?php
